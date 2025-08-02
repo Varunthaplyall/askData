@@ -1,14 +1,24 @@
 ### AskData
 “Ask anything. Get real data, clean results, and visual answers.”
 
+AskData: The Data-Driven Conversational App
+
+AskData is a conversational data analysis application that allows users to get insights from public data by simply asking questions in plain English.
+
+The app's core idea is to act as a bridge between a user's natural language question and a visual, data-driven answer. It processes a query by first using natural language processing (NLP) to understand the user's intent. Based on this understanding, it fetches relevant public data from various sources like APIs or by scraping websites. The fetched data is then cleaned, processed, and analyzed to generate meaningful insights. Finally, these insights are presented to the user through interactive visualizations such as charts, maps, and tables.
+
+The backend, built with FastAPI, acts as the central brain of the application. It orchestrates the entire process, from parsing the user's query with openRouter.Ai to fetching data from various APIs (e.g., World Bank, census) or using scraping tools like Scrapy. Once the data is acquired, it's processed and cleaned using libraries like Pandas and can be further analyzed with machine learning models (Prophet or XGBoost) for tasks like forecasting.
+
+The frontend is a React application that provides a user-friendly interface for inputting queries and displaying the results. It presents the processed data in a clear and interactive format using charting libraries like Chart.js and Plotly. The entire application is containerized using Docker to ensure a consistent development and production environment.
+
 KEY TECHNOLOGIES
 
-| Need         | Tool                   | Why                                |
-| ------------ | ---------------------- | ---------------------------------- |
+| Need         | Tool                   | Why                                | Status
+| ------------ | ---------------------- | ---------------------------------- |  
 | Backend APIs | FastAPI                | Async, Fast, Python-native         |
 | Big Data     | Dask / Pandas          | Handles large datasets efficiently |
 | ML           | Prophet / XGBoost      | Forecast trends                    |
-| NLP          | OpenAI / LangChain     | Parse natural questions            |
+| NLP          | OpenRouter.AI          | Parse natural questions            | Working
 | Frontend     | React + Tailwind       | UI with speed & flexibility        |
 | Visuals      | Chart.js, Plotly       | Interactive, good for analytics    |
 | Scraping     | Scrapy / BeautifulSoup | Fallback for unavailable APIs      |
